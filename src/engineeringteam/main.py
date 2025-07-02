@@ -12,16 +12,7 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 os.makedirs('output', exist_ok=True)
 
 requirements = """
-A simple cash-flow tracker for rental properties.
-The system should allow users to register a property, storing an auto-generated UUID, address, purchase price, optional monthly mortgage payment, and a start date that defaults to today.
-The system should allow users to record income events (type = “rent” or “other”, amount, date, notes) and expense events (category, amount, date, notes), each linked to a property.
-The system should calculate the net cash flow for any property for a given month or year.
-The system should calculate the cash-on-cash return for a property for a given year, based on the net cash flow and the initial cash invested.
-The system should summarize the entire portfolio, reporting totals across all properties.
-The system should list the full ledger of cash-flow events for a property, optionally filtered by a start and end date.
-The system should export a property’s ledger to a CSV file at a user-supplied path.
-The system should reject negative amounts (expenses are recorded as positive numbers) and disallow events dated before the property’s start date.
-The system stores everything in memory for version 1, uses uuid.uuid4() for IDs and datetime.date for dates, and ignores currency conversions.
+Build a basic rental property cash flow tracker in Python.
 """
 module_name = "rentals.py"
 class_name = "PropertyManager"
@@ -37,6 +28,7 @@ def run():
     }
 
     # Create and run the crew
+    print(inputs)
     result = Engineeringteam().crew().kickoff(inputs=inputs)
 
 

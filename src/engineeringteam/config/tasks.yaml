@@ -15,7 +15,7 @@ code_task:
     Here are the requirements: {requirements}
   expected_output: >
     A python module that implements the design and achieves the requirements.
-    IMPORTANT: Output ONLY the raw Python code without any markdown formatting, code block delimiters, or backticks.
+    IMPORTANT: Output ONLY the raw Python code without code block delimiters, or backticks.
     The output should be valid Python code that can be directly saved to a file and executed.
   agent: backend_engineer
   context:
